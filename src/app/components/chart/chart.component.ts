@@ -8,7 +8,7 @@ import { Chart, registerables, ChartType, ChartData } from 'chart.js';
   styleUrls: ['./chart.component.css']
 })
 export class ChartComponent implements OnInit, AfterViewInit {
-  @Input() type: ChartType = "line";
+  @Input() type: ChartType;
   @Input() data: ChartData;
   @Input() custum: boolean;
   @ViewChild('canvas') canvas: ElementRef;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-upload-file',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadFileComponent implements OnInit {
 
+  progress = 0;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  selectFile(event: Event): void {
+    
+  }
+
+  upload(): void {
+   
+    var i =0;
+    while(i<=100){
+      this.progress = i;
+      i++
+    }
   }
 
 }

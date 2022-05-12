@@ -18,6 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { DialogBoxComponent } from './components/dialog-box/dialog-box.component';
+import { OutletComponent } from './pages/outlet/outlet.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DialogBoxComponent } from './components/dialog-box/dialog-box.component
     SideBarComponent,
     TableComponent,
     UploadFileComponent,
-    DialogBoxComponent
+    DialogBoxComponent,
+    OutletComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +47,7 @@ import { DialogBoxComponent } from './components/dialog-box/dialog-box.component
     MatInputModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,9 @@
 <section class="chart-wrapper">
 
-          <select (change)="changeTypeChart($event)" *ngIf="custum">
+          <select (change)="changeTypeChart($event)" *ngIf="custum" class="px-4">
             <option value="pie">Pie</option>
             <option value="line">Line</option>
-            <option value="bubble">Bubble</option>
+            <option value="bar">Bar</option>
             <option value="radar">Radar</option>
           </select>
           <div class="chart">
