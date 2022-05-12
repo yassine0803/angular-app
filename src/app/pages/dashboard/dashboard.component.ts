@@ -10,7 +10,7 @@ export class DashboardComponent{
   barChart = {
     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
     datasets: [{
-        label: '# of Votes',
+        label: 'Label 1',
         data: [12, 19, 3, 5, 2, 3],
         backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -27,7 +27,7 @@ export class DashboardComponent{
 pieChart = {
   labels: ['Red', 'Blue', 'Yellow'],
   datasets: [{
-      label: '# Pie Chart',
+      label: 'Label 2',
       data: [12, 19, 3],
       backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
@@ -42,7 +42,7 @@ pieChart = {
 customChart = {
   labels: ['Red', 'Blue', 'Yellow'],
   datasets: [{
-      label: '# Custom Chart',
+      label: 'Label 3',
       data: [12, 19, 3],
       backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
