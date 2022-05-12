@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -14,6 +15,7 @@ export class RegisterComponent implements OnInit {
 
     constructor(
         private formBuilder: FormBuilder,
+        private router: Router
     ) {
     }
 
@@ -26,19 +28,19 @@ export class RegisterComponent implements OnInit {
         });
     }
 
-    // convenience getter for easy access to form fields
+    
     get f() { return this.registerForm.controls; }
 
     onSubmit() {
         this.submitted = true;
 
-        // stop here if form is invalid
         if (this.registerForm.invalid) {
             return;
         }
 
         this.loading = true;
-        
+        localStorage.setItem('username',this.registerForm.get('username')?.value);
+        setTimeout(()=>{this.router.navigate(['dashboard']);},1000)
         }
 
 }

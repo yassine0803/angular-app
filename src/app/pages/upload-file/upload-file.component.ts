@@ -7,15 +7,15 @@ import { Observable } from 'rxjs';
   styleUrls: ['./upload-file.component.css']
 })
 export class UploadFileComponent implements OnInit {
-
+  file: File;
   progress = 0;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  selectFile(event: Event): void {
-    
+  selectFile(event: any): void {
+    this.file = event!.target!.files[0];
   }
 
   upload(): void {

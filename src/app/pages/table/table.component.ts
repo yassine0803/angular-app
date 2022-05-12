@@ -6,13 +6,14 @@ import { DialogBoxComponent } from 'src/app/components/dialog-box/dialog-box.com
 export interface UsersData {
   name: string;
   id: number;
+  role: string;
 }
 
 const ELEMENT_DATA: UsersData[] = [
-  {id: 0, name: 'IA'},
-  {id: 1, name: 'Devops'},
-  {id: 2, name: 'Backend developer'},
-  {id: 3, name: 'Frontend developer'}
+  {id: 0, name: 'user', role:'user'},
+  {id: 1, name: 'user1', role:'developer'},
+  {id: 2, name: 'user2',role:'admin'},
+  {id: 3, name: 'user3',role:'test'}
 ];
 
 @Component({
@@ -21,7 +22,7 @@ const ELEMENT_DATA: UsersData[] = [
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'action'];
+  displayedColumns: string[] = ['id', 'name','role', 'action'];
   dataSource = ELEMENT_DATA;
   
 
@@ -47,10 +48,11 @@ export class TableComponent implements OnInit {
       }
     });
   }
-  updateRowData(row_obj: { id: number; name: string; }){
+  updateRowData(row_obj: { id: number; name: string;role: string }){
     this.dataSource = this.dataSource.filter((value)=>{
       if(value.id == row_obj.id){
         value.name = row_obj.name;
+        value.role = row_obj.role;
       }
       return true;
     });
