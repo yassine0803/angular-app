@@ -1,12 +1,14 @@
 <section class="chart-wrapper">
 
-          <select (change)="changeTypeChart($event)" *ngIf="custum" class="px-4">
-            <option value="pie">Pie</option>
-            <option value="line">Line</option>
-            <option value="bar">Bar</option>
-            <option value="radar">Radar</option>
-          </select>
-          <div class="chart">
-            <canvas height="400" width="400" #canvas></canvas>
-          </div>
+  
+
+  <div class="chart">
+    <canvas height="300" width="300" #canvas></canvas>
+  </div>
+  <select (change)="changeTypeChart($event)" *ngIf="custom" class="px-4 form-select">
+    <option value="pie">Pie</option>
+    <option value="line">Line</option>
+    <option value="bar">Bar</option>
+    <option value="radar">Radar</option>
+  </select>
 </section>

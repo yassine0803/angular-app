@@ -10,7 +10,7 @@ import { Chart, registerables, ChartType, ChartData } from 'chart.js';
 export class ChartComponent implements OnInit, AfterViewInit {
   @Input() type: ChartType;
   @Input() data: ChartData;
-  @Input() custum: boolean;
+  @Input() custom: boolean;
   @ViewChild('canvas') canvas: ElementRef;
   chart: Chart;
 

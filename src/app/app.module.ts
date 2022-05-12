@@ -20,6 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { DialogBoxComponent } from './components/dialog-box/dialog-box.component';
 import { OutletComponent } from './pages/outlet/outlet.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
