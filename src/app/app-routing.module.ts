@@ -10,6 +10,7 @@ import { UploadFileComponent } from './pages/upload-file/upload-file.component';
 
 const routes: Routes = [
   { path: '',component:OutletComponent,  children:[
+    {path:'', redirectTo:'dashboard', pathMatch:"full"},
     {path:'dashboard', component: DashboardComponent},
     {path:'table', component: TableComponent},
     {path: 'upload-file', component: UploadFileComponent}

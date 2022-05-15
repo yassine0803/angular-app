@@ -20,10 +20,9 @@ export class UploadFileComponent implements OnInit {
 
   upload(): void {
    
-    var i =0;
-    while(i<=100){
-      this.progress = i;
-      i++
+    
+    while(this.progress<=100){
+      this.progress ++;
     }
   }
 
