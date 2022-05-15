@@ -1,5 +1,5 @@
-<div class="mt-5 container d-flex justify-content-center align-items-center">
-    <table mat-table [dataSource]="dataSource" #mytable class="my-table mat-elevation-z8 w-100">
+<div class="vw-70 vh-100 d-flex justify-content-center align-items-center">
+    <table mat-table [dataSource]="dataSource" #mytable class="my-table mat-elevation-z8 w-50">
 
 
         <!-- Id Column -->
@@ -22,8 +22,8 @@
         <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef> Action </th>
             <td mat-cell *matCellDef="let element" class="action-link">
-                <a (click)="openDialog('Update',element)">Edit</a> |
-                <a (click)="openDialog('Delete',element)">Delete</a>
+                <a class="btn btn-default" (click)="openDialog('Update',element)">Edit</a> |
+                <a class="btn btn-default" (click)="openDialog('Delete',element)">Delete</a>
             </td>
         </ng-container>
 
